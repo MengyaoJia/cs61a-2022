@@ -52,4 +52,13 @@ def merge(n1,n2):
     else:
         return merge(n1//10,n2)*10 + n1%10
 
-print(merge(31,42))
+def is_prime(n):
+    #there is another way of sqrt(n)
+    def helper(i):
+        if n == i and n > 1:
+            return True
+        elif n % i == 0:
+            return False
+        else:
+            return helper(i+1)
+    return helper(2)    
